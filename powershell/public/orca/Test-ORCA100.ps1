@@ -3,7 +3,7 @@
     Bulk Complaint Level threshold is between 4 and 6
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA100
@@ -34,7 +34,7 @@ function Test-ORCA100{
     $Collection = $__MtSession.OrcaCache
     $obj = New-Object -TypeName ORCA100
     $obj.Run($Collection)
-    $testResult = ($obj.Completed -and $obj.Result -eq "Pass")
+    $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
     $resultMarkdown = "Anti-Spam Policies - Bulk Complaint Level - ORCA-100`n`n"
     if($testResult){

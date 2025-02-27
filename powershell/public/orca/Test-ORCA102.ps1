@@ -3,7 +3,7 @@
     Advanced Spam filter options are turned off
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA102
@@ -34,7 +34,7 @@ function Test-ORCA102{
     $Collection = $__MtSession.OrcaCache
     $obj = New-Object -TypeName ORCA102
     $obj.Run($Collection)
-    $testResult = ($obj.Completed -and $obj.Result -eq "Pass")
+    $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
     $resultMarkdown = "Anti-Spam Policies - Advanced Spam Filter (ASF) - ORCA-102`n`n"
     if($testResult){

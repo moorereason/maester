@@ -3,7 +3,7 @@
     Anti-phishing policy exists and EnableUnauthenticatedSender is true
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA111
@@ -34,7 +34,7 @@ function Test-ORCA111{
     $Collection = $__MtSession.OrcaCache
     $obj = New-Object -TypeName ORCA111
     $obj.Run($Collection)
-    $testResult = ($obj.Completed -and $obj.Result -eq "Pass")
+    $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
     $resultMarkdown = "Microsoft Defender for Office 365 Policies - Unauthenticated Sender (tagging) - ORCA-111`n`n"
     if($testResult){

@@ -3,7 +3,7 @@
     No exclusions for the built-in protection policies
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:07:54 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:21:20 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA239
@@ -34,7 +34,7 @@ function Test-ORCA239{
     $Collection = $__MtSession.OrcaCache
     $obj = New-Object -TypeName ORCA239
     $obj.Run($Collection)
-    $testResult = ($obj.Completed -and $obj.Result -eq "Pass")
+    $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
     $resultMarkdown = "Microsoft Defender for Office 365 Policies - Built-in Protection - `n`n"
     if($testResult){

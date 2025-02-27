@@ -3,7 +3,7 @@
     AllowClickThrough is disabled in Safe Links policies
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA113
@@ -34,7 +34,7 @@ function Test-ORCA113{
     $Collection = $__MtSession.OrcaCache
     $obj = New-Object -TypeName ORCA113
     $obj.Run($Collection)
-    $testResult = ($obj.Completed -and $obj.Result -eq "Pass")
+    $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
     $resultMarkdown = "Microsoft Defender for Office 365 Policies - Do not let users click through safe links - ORCA-113`n`n"
     if($testResult){

@@ -218,7 +218,7 @@ function Test-$($content.func){
     `$Collection = `$__MtSession.OrcaCache
     `$obj = New-Object -TypeName $($content.func)
     `$obj.Run(`$Collection)
-    `$testResult = (`$obj.Completed -and `$obj.Result -eq "Pass")
+    `$testResult = (`$obj.Completed -and `$obj.ResultStandard -eq "Pass")
 
     `$resultMarkdown = "$($content.area + " - " + $content.name + " - " + $content.control)``n``n"
     if(`$testResult){

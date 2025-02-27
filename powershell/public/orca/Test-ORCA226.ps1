@@ -3,7 +3,7 @@
     Each domain has a Safe Link policy applied to it
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:07:54 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA226
@@ -34,7 +34,7 @@ function Test-ORCA226{
     $Collection = $__MtSession.OrcaCache
     $obj = New-Object -TypeName ORCA226
     $obj.Run($Collection)
-    $testResult = ($obj.Completed -and $obj.Result -eq "Pass")
+    $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
     $resultMarkdown = "Microsoft Defender for Office 365 Policies - Safe Links Policy Rules - `n`n"
     if($testResult){
