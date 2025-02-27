@@ -234,8 +234,14 @@ function Test-$($content.func){
 
     `$passResult = "``u{2705} Pass"
     `$failResult = "``u{274C} Fail"
-    `$skipResult = "``u{1F5C4}  Skip"
-    `$resultDetail = "| `$(`$obj.ItemName) | `$(`$obj.DataType) | Result |``n"
+    `$skipResult = "``u{1F5C4} Skip"
+    `$showObject = ""+`$obj.CheckType -eq "ObjectPropertyValue"
+    `$resultDetail = ""
+
+    if (`$showObject) { `$resultDetail += "| `$(`$obj.ObjectType) " }
+    `$resultDetail += "| `$(`$obj.ItemName) | `$(`$obj.DataType) | Result |``n"
+
+    if (`$showObject) { `$resultDetail += "| --- " }
     `$resultDetail += "| --- | --- | --- |``n"
     foreach(`$config in `$obj.Config){
         switch(`$config.ResultStandard){
@@ -244,6 +250,8 @@ function Test-$($content.func){
             "None" {`$itemResult = `$skipResult}
             "Fail" {`$itemResult = `$failResult}
         }
+
+        if (`$showObject) { `$resultDetail += "| `$(`$config.Object) " }
         `$resultDetail += "| `$(`$config.ConfigItem) | `$(`$config.ConfigData) | `$itemResult |``n"
     }
 
