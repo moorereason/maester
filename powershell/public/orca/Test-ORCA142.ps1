@@ -3,7 +3,7 @@
     Phish action set to Quarantine message
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA142
@@ -36,7 +36,7 @@ function Test-ORCA142{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Anti-Spam Policies - Phish Action - `n`n"
+    $resultMarkdown = "Anti-Spam Policies - Phish Action - 142`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Phish action set to Quarantine message`n`n%ResultDetail%"
     }else{

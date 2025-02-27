@@ -3,7 +3,7 @@
     Spam action set to move message to junk mail folder or quarantine
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA139
@@ -36,7 +36,7 @@ function Test-ORCA139{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Anti-Spam Policies - Spam Action - `n`n"
+    $resultMarkdown = "Anti-Spam Policies - Spam Action - 139`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Spam action set to move message to junk mail folder or quarantine`n`n%ResultDetail%"
     }else{

@@ -3,7 +3,7 @@
     Each domain has a malware filter policy applied to it, or the default policy is being used
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA232
@@ -36,7 +36,7 @@ function Test-ORCA232{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Malware Filter Policy - Malware Filter Policy Policy Rules - `n`n"
+    $resultMarkdown = "Malware Filter Policy - Malware Filter Policy Policy Rules - 232`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Each domain has a malware filter policy applied to it, or the default policy is being used`n`n%ResultDetail%"
     }else{

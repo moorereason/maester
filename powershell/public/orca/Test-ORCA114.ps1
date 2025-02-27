@@ -3,7 +3,7 @@
     No IP Allow Lists have been configured
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA114
@@ -36,7 +36,7 @@ function Test-ORCA114{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Anti-Spam Policies - IP Allow Lists - `n`n"
+    $resultMarkdown = "Anti-Spam Policies - IP Allow Lists - 114`n`n"
     if($testResult){
         $resultMarkdown += "Well done. No IP Allow Lists have been configured`n`n%ResultDetail%"
     }else{

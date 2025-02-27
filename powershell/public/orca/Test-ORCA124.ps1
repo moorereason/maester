@@ -3,7 +3,7 @@
     Safe attachments unknown malware response set to block messages
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA124
@@ -36,7 +36,7 @@ function Test-ORCA124{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Safe attachments unknown malware response - `n`n"
+    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Safe attachments unknown malware response - 124`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Safe attachments unknown malware response set to block messages`n`n%ResultDetail%"
     }else{

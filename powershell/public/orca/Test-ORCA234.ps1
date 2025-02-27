@@ -3,7 +3,7 @@
     Click through is disabled for Safe Documents
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA234
@@ -36,7 +36,7 @@ function Test-ORCA234{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Do not let users click through Safe Documents for Office clients - `n`n"
+    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Do not let users click through Safe Documents for Office clients - 234`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Click through is disabled for Safe Documents`n`n%ResultDetail%"
     }else{

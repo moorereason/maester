@@ -3,7 +3,7 @@
     Mailbox intelligence based impersonation protection action set to move message to junk mail folder
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA116
@@ -36,7 +36,7 @@ function Test-ORCA116{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Mailbox Intelligence Protection Action - `n`n"
+    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Mailbox Intelligence Protection Action - 116`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Mailbox intelligence based impersonation protection action set to move message to junk mail folder`n`n%ResultDetail%"
     }else{

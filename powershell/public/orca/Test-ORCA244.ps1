@@ -3,7 +3,7 @@
     Policies are configured to honor sending domains DMARC.
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA244
@@ -36,7 +36,7 @@ function Test-ORCA244{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Anti-Phishing Policy - Honor DMARC Policy - `n`n"
+    $resultMarkdown = "Anti-Phishing Policy - Honor DMARC Policy - 244`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Policies are configured to honor sending domains DMARC.`n`n%ResultDetail%"
     }else{

@@ -3,7 +3,7 @@
     Bulk action set to Move message to Junk Email Folder
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA141
@@ -36,7 +36,7 @@ function Test-ORCA141{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Anti-Spam Policies - Bulk Action - `n`n"
+    $resultMarkdown = "Anti-Spam Policies - Bulk Action - 141`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Bulk action set to Move message to Junk Email Folder`n`n%ResultDetail%"
     }else{

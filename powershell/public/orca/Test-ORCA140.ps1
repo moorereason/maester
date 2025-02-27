@@ -3,7 +3,7 @@
     High Confidence Spam action set to Quarantine message
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA140
@@ -36,7 +36,7 @@ function Test-ORCA140{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Anti-Spam Policies - High Confidence Spam Action - `n`n"
+    $resultMarkdown = "Anti-Spam Policies - High Confidence Spam Action - 140`n`n"
     if($testResult){
         $resultMarkdown += "Well done. High Confidence Spam action set to Quarantine message`n`n%ResultDetail%"
     }else{

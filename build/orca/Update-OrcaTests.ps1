@@ -153,8 +153,11 @@ foreach($file in $testFiles){
     $name = [regex]::Match($content.content,"this.name.*[\'\`"](?'capture'.*)[\'\`"]",$option)
     $pass = [regex]::Match($content.content,"this.passtext.*[\'\`"](?'capture'.*)[\'\`"]",$option)
     $fail = [regex]::Match($content.content,"this.failrecommendation.*[\'\`"](?'capture'.*)[\'\`"]",$option)
-    $control = [regex]::Match($content.content,"this.control.*[\'\`"](?'capture'.*)[\'\`"]",$option)
     $area = [regex]::Match($content.content,"this.area.*[\'\`"](?'capture'.*)[\'\`"]",$option)
+    # Sometimes the Control is an integer instead of a quoted string.
+    # Attempt a second conditional capture if the first capture didn't match.
+    $control = [regex]::Match($content.content,"this.control\s*=\s*(?:[\'\`"](?'capture'.*)[\'\`"])?(?(capture)|(?'capture'\S+))?",$option)
+
     $content.name = $name.Groups['capture'].Value
     $content.pass = $pass.Groups['capture'].Value
     $content.fail = $fail.Groups['capture'].Value

@@ -3,7 +3,7 @@
     Each domain has a anti-spam policy applied to it, or the default policy is being used
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA231
@@ -36,7 +36,7 @@ function Test-ORCA231{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Anti-Spam Policies - Anti-Spam Policy Rules - `n`n"
+    $resultMarkdown = "Anti-Spam Policies - Anti-Spam Policy Rules - 231`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Each domain has a anti-spam policy applied to it, or the default policy is being used`n`n%ResultDetail%"
     }else{

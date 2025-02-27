@@ -3,7 +3,7 @@
     Common attachment type filter is enabled
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA205
@@ -36,7 +36,7 @@ function Test-ORCA205{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Malware Filter Policy - Common Attachment Type Filter - `n`n"
+    $resultMarkdown = "Malware Filter Policy - Common Attachment Type Filter - 205`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Common attachment type filter is enabled`n`n%ResultDetail%"
     }else{

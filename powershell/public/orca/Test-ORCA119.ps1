@@ -3,7 +3,7 @@
     Similar Domains Safety Tips is enabled
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA119
@@ -36,7 +36,7 @@ function Test-ORCA119{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Similar Domains Safety Tips - `n`n"
+    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Similar Domains Safety Tips - 119`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Similar Domains Safety Tips is enabled`n`n%ResultDetail%"
     }else{

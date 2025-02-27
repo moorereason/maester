@@ -3,7 +3,7 @@
     Safe Links is enabled for office documents
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA238
@@ -36,7 +36,7 @@ function Test-ORCA238{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Safe Links protections for links in office documents - `n`n"
+    $resultMarkdown = "Microsoft Defender for Office 365 Policies - Safe Links protections for links in office documents - 238`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Safe Links is enabled for office documents`n`n%ResultDetail%"
     }else{

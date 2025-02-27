@@ -3,7 +3,7 @@
     Authenticated Receive Chain is set up for domains not pointing to EOP/MDO, or all domains point to EOP/MDO.
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:42:52 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:51:02 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA243
@@ -36,7 +36,7 @@ function Test-ORCA243{
     $obj.Run($Collection)
     $testResult = ($obj.Completed -and $obj.ResultStandard -eq "Pass")
 
-    $resultMarkdown = "Transport - Authenticated Receive Chain (ARC) - `n`n"
+    $resultMarkdown = "Transport - Authenticated Receive Chain (ARC) - 243`n`n"
     if($testResult){
         $resultMarkdown += "Well done. Authenticated Receive Chain is set up for domains not pointing to EOP/MDO, or all domains point to EOP/MDO.`n`n%ResultDetail%"
     }else{
