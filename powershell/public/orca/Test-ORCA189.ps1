@@ -3,7 +3,7 @@
     Safe Attachments is not bypassed
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:36 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA189
@@ -40,7 +40,7 @@ function Test-ORCA189{
     if($testResult){
         $resultMarkdown += "Well done. Safe Attachments is not bypassed`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Remove mail flow rules which bypass Safe Attachments`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

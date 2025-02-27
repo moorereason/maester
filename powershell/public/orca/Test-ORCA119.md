@@ -4,5 +4,5 @@ Microsoft Defender for Office 365 can show a warning tip to recipients in messag
 
 ### Related Links
 
-* [Microsoft 365 Defender Portal - Anti-phishing](https://security.microsoft.com/antiphishing) 
-* [Recommended settings for EOP and Microsoft Defender for Office 365 security](https://aka.ms/orca-atpp-docs-7)
+* [Recommended settings for EOP and Microsoft Defender for Office 365 security](https://aka.ms/orca-atpp-docs-7) 
+* [Microsoft 365 Defender Portal - Anti-phishing](https://security.microsoft.com/antiphishing)

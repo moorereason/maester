@@ -3,7 +3,7 @@
     Safe Links is enabled intra-organization
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:36 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA179
@@ -40,7 +40,7 @@ function Test-ORCA179{
     if($testResult){
         $resultMarkdown += "Well done. Safe Links is enabled intra-organization`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Enable Safe Links between internal users`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

@@ -3,7 +3,7 @@
     Mailbox intelligence based impersonation protection action set to move message to junk mail folder
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:35 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA116
@@ -40,7 +40,7 @@ function Test-ORCA116{
     if($testResult){
         $resultMarkdown += "Well done. Mailbox intelligence based impersonation protection action set to move message to junk mail folder`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Change Mailbox intelligence based impersonation protection action to move message to junk mail folder`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

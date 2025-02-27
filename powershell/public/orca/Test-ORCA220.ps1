@@ -3,7 +3,7 @@
     Advanced Phish filter Threshold level is adequate.
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:36 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA220
@@ -40,7 +40,7 @@ function Test-ORCA220{
     if($testResult){
         $resultMarkdown += "Well done. Advanced Phish filter Threshold level is adequate.`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Set Advanced Phish filter Threshold to 3 or 4`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

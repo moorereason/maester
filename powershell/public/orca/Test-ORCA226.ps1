@@ -3,7 +3,7 @@
     Each domain has a Safe Link policy applied to it
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:36 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:54 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA226
@@ -40,7 +40,7 @@ function Test-ORCA226{
     if($testResult){
         $resultMarkdown += "Well done. Each domain has a Safe Link policy applied to it`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Apply a Safe Links policy to every domain`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

@@ -3,7 +3,7 @@
     Outbound spam filter policy settings configured
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:35 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA103
@@ -40,7 +40,7 @@ function Test-ORCA103{
     if($testResult){
         $resultMarkdown += "Well done. Outbound spam filter policy settings configured`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Set RecipientLimitExternalPerHour to 500, RecipientLimitInternalPerHour to 1000, and ActionWhenThresholdReached to block.`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

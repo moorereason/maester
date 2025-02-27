@@ -3,7 +3,7 @@
     Mailbox intelligence is enabled in anti-phishing policies
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:36 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA221
@@ -40,7 +40,7 @@ function Test-ORCA221{
     if($testResult){
         $resultMarkdown += "Well done. Mailbox intelligence is enabled in anti-phishing policies`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Enable mailbox intelligence in anti-phishing policies`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"
