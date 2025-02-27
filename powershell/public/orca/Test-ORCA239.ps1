@@ -3,7 +3,7 @@
     No exclusions for the built-in protection policies
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:20 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:24 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA239
@@ -41,6 +41,11 @@ function Test-ORCA239{
         $resultMarkdown += "Well done. No exclusions for the built-in protection policies`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Remove exclusions from the built-in protection policies.`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

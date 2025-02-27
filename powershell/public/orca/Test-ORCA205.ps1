@@ -3,7 +3,7 @@
     Common attachment type filter is enabled
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA205
@@ -41,6 +41,11 @@ function Test-ORCA205{
         $resultMarkdown += "Well done. Common attachment type filter is enabled`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable common attachment type filter`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

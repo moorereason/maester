@@ -3,7 +3,7 @@
     Anti-phishing policy exists and EnableFirstContactSafetyTips is true
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:20 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:24 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA241
@@ -41,6 +41,11 @@ function Test-ORCA241{
         $resultMarkdown += "Well done. Anti-phishing policy exists and EnableFirstContactSafetyTips is true`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable first contact safety tips to highlight suspicious messages to users.`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

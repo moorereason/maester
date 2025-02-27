@@ -3,7 +3,7 @@
     Important protection alerts responsible for AIR activities are enabled
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:20 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:24 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA242
@@ -41,6 +41,11 @@ function Test-ORCA242{
         $resultMarkdown += "Well done. Important protection alerts responsible for AIR activities are enabled`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable important protection alerts that are responsible for AIR activities.`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

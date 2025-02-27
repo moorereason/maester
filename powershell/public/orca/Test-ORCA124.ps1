@@ -3,7 +3,7 @@
     Safe attachments unknown malware response set to block messages
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA124
@@ -41,6 +41,11 @@ function Test-ORCA124{
         $resultMarkdown += "Well done. Safe attachments unknown malware response set to block messages`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Set Safe attachments unknown malware response to block messages`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

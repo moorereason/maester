@@ -3,7 +3,7 @@
     Anti-phishing policy exists and EnableUnauthenticatedSender is true
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA111
@@ -41,6 +41,11 @@ function Test-ORCA111{
         $resultMarkdown += "Well done. Anti-phishing policy exists and EnableUnauthenticatedSender is true`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable unauthenticated sender tagging in Anti-phishing policy`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

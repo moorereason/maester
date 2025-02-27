@@ -3,7 +3,7 @@
     Authenticated Receive Chain is set up for domains not pointing to EOP/MDO, or all domains point to EOP/MDO.
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:20 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:24 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA243
@@ -41,6 +41,11 @@ function Test-ORCA243{
         $resultMarkdown += "Well done. Authenticated Receive Chain is set up for domains not pointing to EOP/MDO, or all domains point to EOP/MDO.`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable Authenticated Receive Chain (ARC) trusted sealers for domains not pointed at EOP/MDO.`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

@@ -3,7 +3,7 @@
     End-user spam notification is enabled
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA107
@@ -41,6 +41,11 @@ function Test-ORCA107{
         $resultMarkdown += "Well done. End-user spam notification is enabled`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable End-user Spam notifications on a quarantine policy`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

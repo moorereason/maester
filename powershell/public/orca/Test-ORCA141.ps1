@@ -3,7 +3,7 @@
     Bulk action set to Move message to Junk Email Folder
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA141
@@ -41,6 +41,11 @@ function Test-ORCA141{
         $resultMarkdown += "Well done. Bulk action set to Move message to Junk Email Folder`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Change bulk action to move messages to junk mail folder`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

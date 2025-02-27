@@ -3,7 +3,7 @@
     Your own domains are not being allow listed in an unsafe manner
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA118
@@ -41,6 +41,11 @@ function Test-ORCA118{
         $resultMarkdown += "Well done. Your own domains are not being allow listed in an unsafe manner`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Remove allow listing on domains belonging to your organisation`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

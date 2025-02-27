@@ -3,7 +3,7 @@
     Bulk Complaint Level threshold is between 4 and 6
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA100
@@ -41,6 +41,11 @@ function Test-ORCA100{
         $resultMarkdown += "Well done. Bulk Complaint Level threshold is between 4 and 6`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Set the Bulk Complaint Level threshold to be 6`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

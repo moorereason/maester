@@ -3,7 +3,7 @@
     Similar Domains Safety Tips is enabled
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA119
@@ -41,6 +41,11 @@ function Test-ORCA119{
         $resultMarkdown += "Well done. Similar Domains Safety Tips is enabled`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable Similar Domains Safety Tips so that users can receive visible indication on incoming messages.`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

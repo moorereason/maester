@@ -3,7 +3,7 @@
     Safe Links Synchronous URL detonation is enabled
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA105
@@ -41,6 +41,11 @@ function Test-ORCA105{
         $resultMarkdown += "Well done. Safe Links Synchronous URL detonation is enabled`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable Safe Links Synchronous URL detonation`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

@@ -3,7 +3,7 @@
     Each domain has a Safe Attachments policy applied to it
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA227
@@ -41,6 +41,11 @@ function Test-ORCA227{
         $resultMarkdown += "Well done. Each domain has a Safe Attachments policy applied to it`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Apply a Safe Attachments policy to every domain`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

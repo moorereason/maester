@@ -3,7 +3,7 @@
     AllowClickThrough is disabled in Safe Links policies
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA113
@@ -41,6 +41,11 @@ function Test-ORCA113{
         $resultMarkdown += "Well done. AllowClickThrough is disabled in Safe Links policies`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Do not let users click through safe links to original URL`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

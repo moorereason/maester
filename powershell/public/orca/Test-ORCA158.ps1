@@ -3,7 +3,7 @@
     Safe Attachments is enabled for SharePoint and Teams
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA158
@@ -41,6 +41,11 @@ function Test-ORCA158{
         $resultMarkdown += "Well done. Safe Attachments is enabled for SharePoint and Teams`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Enable Safe Attachments for SharePoint and Teams`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

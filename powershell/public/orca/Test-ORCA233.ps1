@@ -3,7 +3,7 @@
     Domains are pointed directly at EOP or enhanced filtering is used
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA233
@@ -41,6 +41,11 @@ function Test-ORCA233{
         $resultMarkdown += "Well done. Domains are pointed directly at EOP or enhanced filtering is used`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Send mail directly to EOP or configure enhanced filtering`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

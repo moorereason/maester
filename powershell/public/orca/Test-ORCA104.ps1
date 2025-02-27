@@ -3,7 +3,7 @@
     High Confidence Phish action set to Quarantine message
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA104
@@ -41,6 +41,11 @@ function Test-ORCA104{
         $resultMarkdown += "Well done. High Confidence Phish action set to Quarantine message`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Change High Confidence Phish action to Quarantine message`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

@@ -227,6 +227,11 @@ function Test-$($content.func){
         `$resultMarkdown += "Your tenant did not pass. $($content.fail)``n``n%ResultDetail%"
     }
 
+    if (!`$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result `$resultMarkdown.TrimEnd("%ResultDetail%")
+        return `$testResult
+    }
+
     `$passResult = "``u{2705} Pass"
     `$failResult = "``u{274C} Fail"
     `$skipResult = "``u{1F5C4}  Skip"

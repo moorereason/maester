@@ -3,7 +3,7 @@
     Advanced Spam filter options are turned off
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA102
@@ -41,6 +41,11 @@ function Test-ORCA102{
         $resultMarkdown += "Well done. Advanced Spam filter options are turned off`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Turn off Advanced Spam filter (ASF) options in Anti-Spam filter policies`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

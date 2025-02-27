@@ -3,7 +3,7 @@
     Outlook is configured to display external tags for external emails.
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:20 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:24 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA240
@@ -41,6 +41,11 @@ function Test-ORCA240{
         $resultMarkdown += "Well done. Outlook is configured to display external tags for external emails.`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Configure external tags to highlight emails which are sent from external.`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

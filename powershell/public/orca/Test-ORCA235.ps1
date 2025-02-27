@@ -3,7 +3,7 @@
     SPF records is set up for all your custom domains
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA235
@@ -41,6 +41,11 @@ function Test-ORCA235{
         $resultMarkdown += "Well done. SPF records is set up for all your custom domains`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Set up SPF records to prevent spoofing`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

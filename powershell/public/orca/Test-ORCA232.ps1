@@ -3,7 +3,7 @@
     Each domain has a malware filter policy applied to it, or the default policy is being used
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA232
@@ -41,6 +41,11 @@ function Test-ORCA232{
         $resultMarkdown += "Well done. Each domain has a malware filter policy applied to it, or the default policy is being used`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Check your malware filter policies for duplicate rules. Some policies and settings may not be applying.`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"

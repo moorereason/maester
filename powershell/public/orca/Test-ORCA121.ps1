@@ -3,7 +3,7 @@
     Supported filter policy action used
 
 .DESCRIPTION
-    Generated on 02/27/2025 08:21:19 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:31:23 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA121
@@ -41,6 +41,11 @@ function Test-ORCA121{
         $resultMarkdown += "Well done. Supported filter policy action used`n`n%ResultDetail%"
     }else{
         $resultMarkdown += "Your tenant did not pass. Change filter policy action to support Zero Hour Auto Purge`n`n%ResultDetail%"
+    }
+
+    if (!$obj.ExpandResults) {
+        Add-MtTestResultDetail -Result $resultMarkdown.TrimEnd("%ResultDetail%")
+        return $testResult
     }
 
     $passResult = "`u{2705} Pass"
