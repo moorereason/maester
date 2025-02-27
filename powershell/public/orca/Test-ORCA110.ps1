@@ -3,7 +3,7 @@
     Internal Sender notifications are disabled
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:35 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA110
@@ -40,7 +40,7 @@ function Test-ORCA110{
     if($testResult){
         $resultMarkdown += "Well done. Internal Sender notifications are disabled`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Disable notifying internal senders of malware detection`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

@@ -4,5 +4,5 @@ Notifying internal senders about malware detected in email messages could have n
 
 ### Related Links
 
-* [Microsoft 365 Defender Portal - Anti-malware](https://security.microsoft.com/antimalwarev2) 
-* [Recommended settings for EOP and Office 365 Microsoft Defender for Office 365 security](https://aka.ms/orca-atpp-docs-6)
+* [Recommended settings for EOP and Office 365 Microsoft Defender for Office 365 security](https://aka.ms/orca-atpp-docs-6) 
+* [Microsoft 365 Defender Portal - Anti-malware](https://security.microsoft.com/antimalwarev2)

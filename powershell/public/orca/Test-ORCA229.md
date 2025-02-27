@@ -4,5 +4,5 @@ Adding domains as trusted in Anti-phishing policy will result in the action for 
 
 ### Related Links
 
-* [Microsoft 365 Defender Portal - Anti-phishing](https://security.microsoft.com/antiphishing) 
-* [Recommended settings for EOP and Microsoft Defender for Office 365](https://aka.ms/orca-atpp-docs-7)
+* [Recommended settings for EOP and Microsoft Defender for Office 365](https://aka.ms/orca-atpp-docs-7) 
+* [Microsoft 365 Defender Portal - Anti-phishing](https://security.microsoft.com/antiphishing)

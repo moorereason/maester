@@ -4,5 +4,5 @@ s important in this circumstance to check that the desired settings are applied 
 
 ### Related Links
 
-* [Microsoft 365 Defender Portal - Anti-spam policies](https://security.microsoft.com/antispam) 
-* [Order and precedence of email protection](https://aka.ms/orca-antispam-docs-5)
+* [Order and precedence of email protection](https://aka.ms/orca-antispam-docs-5) 
+* [Microsoft 365 Defender Portal - Anti-spam policies](https://security.microsoft.com/antispam)

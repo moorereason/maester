@@ -3,7 +3,7 @@
     No IP Allow Lists have been configured
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:35 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:53 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA114
@@ -40,7 +40,7 @@ function Test-ORCA114{
     if($testResult){
         $resultMarkdown += "Well done. No IP Allow Lists have been configured`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Remove IP addresses from IP allow list`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"

@@ -3,7 +3,7 @@
     Each domain has a anti-spam policy applied to it, or the default policy is being used
 
 .DESCRIPTION
-    Generated on 01/19/2025 07:06:36 by .\build\orca\Update-OrcaTests.ps1
+    Generated on 02/27/2025 08:07:54 by .\build\orca\Update-OrcaTests.ps1
 
 .EXAMPLE
     Test-ORCA231
@@ -40,7 +40,7 @@ function Test-ORCA231{
     if($testResult){
         $resultMarkdown += "Well done. Each domain has a anti-spam policy applied to it, or the default policy is being used`n`n%ResultDetail%"
     }else{
-        $resultMarkdown += "Your tenant did not pass. `n`n%ResultDetail%"
+        $resultMarkdown += "Your tenant did not pass. Check your anti-spam policies for duplicate rules. Some policies and settings may not be applying.`n`n%ResultDetail%"
     }
 
     $passResult = "`u{2705} Pass"
